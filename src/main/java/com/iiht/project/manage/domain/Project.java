@@ -20,17 +20,22 @@ public class Project {
 	private Date endDate;
 	private String priority;
 	private String managerId;
+	private int taskCount;
+	private int completedTaskCount;
 
 	public Project() {
 	}
 
-	public Project(String id, String project, Date startDate, Date endDate, String priority, String managerId) {
+	public Project(String id, String project, Date startDate, Date endDate, String priority, String managerId,
+			int taskCount, int completedTaskCount) {
 		this.id = id;
 		this.project = project;
 		this.startDate = startDate;
 		this.endDate = endDate;
 		this.priority = priority;
 		this.managerId = managerId;
+		this.taskCount = taskCount;
+		this.completedTaskCount = completedTaskCount;
 	}
 
 	public String getId() {
@@ -79,6 +84,22 @@ public class Project {
 
 	public void setManagerId(String managerId) {
 		this.managerId = managerId;
+	}
+
+	public int getTaskCount() {
+		return taskCount;
+	}
+
+	public void setTaskCount(int taskCount) {
+		this.taskCount = taskCount;
+	}
+
+	public int getCompletedTaskCount() {
+		return completedTaskCount;
+	}
+
+	public void setCompletedTaskCount(int completedTaskCount) {
+		this.completedTaskCount = completedTaskCount;
 	}
 
 }

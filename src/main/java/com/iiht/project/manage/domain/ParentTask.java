@@ -13,15 +13,15 @@ public class ParentTask {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "parent_id", updatable = false, nullable = false)
 	private String id;
-	private String parentTask;
+	private String task;
 
 	public ParentTask() {
 	}
 
-	public ParentTask(String id, String parentTask) {
+	public ParentTask(String id, String task) {
 		super();
 		this.id = id;
-		this.parentTask = parentTask;
+		this.task = task;
 	}
 
 	public String getId() {
@@ -32,12 +32,12 @@ public class ParentTask {
 		this.id = id;
 	}
 
-	public String getParentTask() {
-		return parentTask;
+	public String getTask() {
+		return task;
 	}
 
-	public void setParentTask(String parentTask) {
-		this.parentTask = parentTask;
+	public void setParentTask(String task) {
+		this.task = task;
 	}
 
 }
